@@ -1,5 +1,279 @@
 
 /* Covered by your Grace font */
+/*   Three-Color Section
+html
+Copy
+Edit
+<section class="three-color">
+  <div class="color-one"></div>
+  <div class="color-two"></div>
+  <div class="color-three"></div>
+</section>
+This section is a thin horizontal color bar at the top of the webpage.
+It contains three div elements, each representing a different color.
+These three colors are likely a design element used for branding or aesthetic purposes.
+Pre-Nav Section
+html
+Copy
+Edit
+<section class="pre-nav">
+  <div class="container">
+    <div class="pre-nav-content">
+This section appears above the navigation bar (pre-nav suggests "before navigation").
+It is wrapped in a .container to maintain structure.
+Left Side - Logo
+html
+Copy
+Edit
+<div class="pre-nav-content-left">
+  <div class="pre-nav-content-left-image">
+    <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+  </div>
+</div>
+Displays the website logo.
+The logo is wrapped in an anchor (<a>), making it clickable (likely linking to the homepage).
+Right Side - Social Media Links
+html
+Copy
+Edit
+<div class="pre-nav-content-right">
+  <div class="pre-nav-content-right-socials">
+    <div class="pre-nav-content-right-socials-item">
+      <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+    <div class="pre-nav-content-right-socials-item">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+    </div>
+    <div class="pre-nav-content-right-socials-item">
+      <a href="#"><i class="bi bi-pinterest"></i></a>
+    </div>
+    <div class="pre-nav-content-right-socials-item">
+      <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+Displays social media icons (bi is Bootstrap Icons class).
+Icons link to social media pages.
+Right Side - Contact Info
+html
+Copy
+Edit
+<div class="pre-nav-content-right-contact">
+  <div class="pre-nav-content-right-contact-item" style="border-left: none">
+    <i class="bi bi-telephone-outbound-fill"></i>
+    <div class="pre-nav-content-right-contact-info">
+      <p>Call anytime</p>
+      <a href="#">+ 98 (000) - 9630</a>
+    </div>
+  </div>
+  <div class="pre-nav-content-right-contact-item">
+    <i class="bi bi-envelope-paper-fill"></i>
+    <div class="pre-nav-content-right-contact-info">
+      <p>Send email</p>
+      <a href="#">ambed@agrios.com</a>
+    </div>
+  </div>
+  <div class="pre-nav-content-right-contact-item">
+    <i class="bi bi-geo-alt-fill"></i>
+    <div class="pre-nav-content-right-contact-info">
+      <p>380 St Kilda Road</p>
+      <a href="#">Melbourne, Australia</a>
+    </div>
+  </div>
+</div>
+Displays contact details (phone number, email, and address).
+Icons (bi bi-*) provide visual representation.
+Contact details are wrapped in <a> tags, making them clickable.
+CSS Breakdown
+Font Imports
+css
+Copy
+Edit
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+Imports Google Fonts (Covered By Your Grace and Manrope).
+css
+Copy
+Edit
+.covered-by-your-grace-regular {
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.manrope-regular {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+Defines font styles.
+Global Styles
+css
+Copy
+Edit
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+Resets default browser margins and paddings.
+Ensures elements' sizes include padding and borders (box-sizing: border-box).
+Primary Button Styling
+css
+Copy
+Edit
+.primary-btn {
+  background-color: #4baf47;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 30px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+.primary-btn:hover {
+  background-color: #40953e;
+  transform: scale(1.05);
+}
+Creates a button style with a green background.
+Adds padding, rounded corners, and bold text.
+transition: all 0.3s; ensures smooth effects on hover.
+transform: scale(1.05); makes the button slightly bigger on hover.
+Three-Color Section
+css
+Copy
+Edit
+.three-color {
+  height: 4px;
+  display: flex;
+}
+.color-one {
+  background-color: #4baf47;
+  height: 100%;
+  width: 33.3%;
+}
+.color-two {
+  background-color: #c5ce38;
+  height: 100%;
+  width: 33.3%;
+}
+.color-three {
+  background-color: #eec044;
+  height: 100%;
+  width: 33.4%;
+}
+A thin colored strip at the top.
+display: flex; ensures equal distribution of colors.
+Pre-Nav Section
+css
+Copy
+Edit
+.pre-nav-content {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+Aligns elements horizontally (display: flex).
+justify-content: space-between; spreads elements across the width.
+css
+Copy
+Edit
+.pre-nav-content-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+Ensures even spacing between contact and social media sections.
+css
+Copy
+Edit
+.pre-nav-content-right-socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+}
+Spreads social media icons evenly.
+css
+Copy
+Edit
+.pre-nav-content-right-socials-item {
+  background-color: #f8f7f0;
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+Adds circular background to icons.
+Contact Info Styling
+css
+Copy
+Edit
+.pre-nav-content-right-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0.75rem;
+}
+Positions contact details in a flex container.
+css
+Copy
+Edit
+.pre-nav-content-right-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+  gap: 1.5rem;
+  border-left: 1px solid #e4e2d7;
+}
+Adds spacing and borders between items.
+css
+Copy
+Edit
+.pre-nav-content-right-contact-info a {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1f1e17;
+  text-decoration: none;
+}
+Styles contact links (phone, email, address).
+Navbar Styling
+css
+Copy
+Edit
+.navbar {
+  background-image: url(../assets/navbar-img.png);
+  background-size: cover;
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 2;
+  padding: 0.75rem 0;
+}
+Uses a background image for the navbar.
+z-index: 2; ensures it appears above other elements.
+css
+Copy
+Edit
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+Arranges navbar content horizontally.
+Conclusion
+This code creates a pre-navigation section with:
+
+A three-color strip.
+A logo.
+Social media icons.
+Contact details.
+      */
 @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
 
 .covered-by-your-grace-regular {
@@ -68,513 +342,920 @@
 }
 
 /* Pre Nav section */
-@media (max-width: 1024px) {
-  .pre-nav-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .pre-nav-content-right {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .pre-nav-content-right-contact {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .pre-nav-content-right-contact-item {
-    padding: 1rem;
-    justify-content: center;
-    border-left: none;
-    border-top: 1px solid #e4e2d7;
-    width: 100%;
-  }
+.pre-nav-content {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-@media (max-width: 768px) {
-  .pre-nav-content-right-socials {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .pre-nav-content-right-socials-item {
-    padding: 0.5rem;
-  }
-
-  .pre-nav-content-right-contact-info p {
-    font-size: 10px;
-  }
-
-  .pre-nav-content-right-contact-info a {
-    font-size: 12px;
-  }
+.pre-nav-content-left {
+  display: inline-block;
 }
-
-@media (max-width: 480px) {
-  .pre-nav-content {
-    padding: 0.5rem 0;
-  }
-
-  .pre-nav-content-right-socials {
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .pre-nav-content-right-contact {
-    gap: 0.5rem;
-  }
-
-  .pre-nav-content-right-contact-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-    padding: 0.75rem;
-  }
-
-  .pre-nav-content-right-contact-item i {
-    font-size: 1.2rem;
-  }
-
-  .pre-nav-content-right-contact-info a {
-    font-size: 10px;
-  }
+.pre-nav-content-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
+.pre-nav-content-right-socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+}
+.pre-nav-content-right-socials-item {
+  background-color: #f8f7f0;
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+.pre-nav-content-right-socials-item a {
+  text-decoration: none;
+  color: #1f1e17;
+}
+.pre-nav-content-right-socials-item i {
+  width: 14px;
+  height: 14px;
+}
+.pre-nav-content-right-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0.75rem;
+}
+.pre-nav-content-right-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+  gap: 1.5rem;
+  border-left: 1px solid #e4e2d7;
+}
+.pre-nav-content-right-contact-item i {
+  color: #4baf47;
+  font-size: 1.5rem;
+}
+.pre-nav-content-right-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.pre-nav-content-right-contact-info p {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #878680;
+}
+.pre-nav-content-right-contact-info a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1f1e17;
+  text-decoration: none;
+}
+/*       
+Navbar Styles
+css
+Copy
+Edit
+.navbar {
+  background-image: url(../assets/navbar-img.png);
+  background-size: cover;
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 2;
+  padding: 0.75rem 0;
+}
+background-image: url(../assets/navbar-img.png); → Sets a background image for the navbar.
+background-size: cover; → Ensures the background image covers the entire navbar area without stretching.
+margin-bottom: -10px; → Moves the navbar 10px upwards, possibly overlapping the next section.
+position: relative; → Positions the navbar relative to its normal placement (important for z-index to work).
+z-index: 2; → Ensures the navbar stays above other elements (useful when overlapping).
+padding: 0.75rem 0; → Adds top and bottom padding for spacing.
+2️⃣ Navbar Content Styling
+css
+Copy
+Edit
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+display: flex; → Enables a flexbox layout for easy alignment of navbar items.
+align-items: center; → Aligns items vertically centered inside the navbar.
+justify-content: space-between; → Spaces items evenly, pushing left and right sections to opposite sides.
+width: 100%; → Ensures the navbar takes up full width.
+padding: 0.5rem 0; → Adds top and bottom padding.
+3️⃣ Navbar Left Section (Navigation Links)
+css
+Copy
+Edit
+.navbar-content-left-links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+list-style-type: none; → Removes bullet points from the list.
+display: flex; → Aligns the list items horizontally.
+gap: 1.5rem; → Adds space between list items.
+margin-bottom: 0; → Removes unnecessary bottom margin.
+4️⃣ Navbar Left Links Styling
+css
+Copy
+Edit
+.navbar-content-left-links ul li a {
+  text-decoration: none;
+  color: #878680;
+  line-height: 36px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+  padding-right: 1rem;
+  display: inline-block;
+}
+text-decoration: none; → Removes underline from links.
+color: #878680; → Sets a grayish color for the text.
+line-height: 36px; → Ensures consistent spacing between text lines.
+font-weight: 600; → Makes text bold.
+font-size: 16px; → Sets the font size.
+transition: all 0.3s; → Enables smooth hover effects (color change).
+padding-right: 1rem; → Adds right spacing to separate the text from icons.
+display: inline-block; → Allows padding and width adjustments.
+5️⃣ Navbar Left Section Icons (<i> tags)
+css
+Copy
+Edit
+.navbar-content-left-links ul li i {
+  font-size: 0.75rem;
+  color: #878680;
+  margin-left: -0.75rem;
+}
+font-size: 0.75rem; → Makes icons small.
+color: #878680; → Sets gray color for icons.
+margin-left: -0.75rem; → Moves icons slightly closer to the text.
+6️⃣ Hover Effect for Links and Icons
+css
+Copy
+Edit
+.navbar-content-left-links ul li a:hover,
+.navbar-content-left-links ul li i:hover {
+  color: #1f1e17;
+}
+On hover, the text and icon color change to #1f1e17 (a darker shade).
+This improves visibility and makes the navbar interactive.
+7️⃣ Right Section (Cart & Search Icons)
+css
+Copy
+Edit
+.navbar-content-right {
+  border-left: 1px solid #d2d0c6;
+}
+Adds a left border to visually separate the right section.
+8️⃣ Right Section List Styling
+css
+Copy
+Edit
+.navbar-content-right-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+display: flex; → Arranges items horizontally.
+align-items: center; → Centers icons vertically.
+justify-content: flex-end; → Aligns icons to the right.
+list-style-type: none; → Removes bullet points.
+gap: 1.5rem; → Adds spacing between icons.
+margin-bottom: 0; → Removes extra spacing.
+9️⃣ Right Section Icon Styling
+css
+Copy
+Edit
+.navbar-content-right-links ul li i {
+  font-size: 1.5rem;
+  color: black;
+}
+font-size: 1.5rem; → Makes icons large.
+color: black; → Sets black color for icons.
+🔟 Active Link Highlight
+css
+Copy
+Edit
+#active {
+  color: #1f1e17;
+}
+Styles the currently active page link (Home) with a darker color (#1f1e17).
+Ensures users know which page they are on.
+💡 Summary
+This CSS: ✅ Styles a responsive navbar with flexbox
+✅ Ensures a clean, professional look
+✅ Adds hover effects for interactivity
+✅ Keeps active links highlighted
+✅ Separates sections visually with margins & borders
 
+*/
+.navbar-content-left-links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+.navbar-content-left-links ul li a {
+  text-decoration: none;
+  color: #878680;
+  line-height: 36px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+  padding-right: 1rem;
+  display: inline-block;
+}
+.navbar-content-left-links ul li i {
+  font-size: 0.75rem;
+  color: #878680;
+  margin-left: -0.75rem;
+}
+.navbar-content-left-links ul li a:hover,
+.navbar-content-left-links ul li i:hover {
+  color: #1f1e17;
+}
+.navbar-content-right {
+  border-left: 1px solid #d2d0c6;
+}
+.navbar-content-right-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+.navbar-content-right-links ul li i {
+  font-size: 1.5rem;
+  color: black;
+}
+#active {
+  color: #1f1e17;
+}     */
 /* Navbar */
-@media (max-width: 1024px) {
-  .navbar-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .navbar-content-left-links ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .navbar-content-right {
-    border-left: none;
-  }
-
-  .navbar-content-right-links ul {
-    justify-content: center;
-  }
+.navbar {
+  background-image: url(../assets/navbar-img.png);
+  background-size: cover;
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 2;
+  padding: 0.75rem 0;
 }
-
-@media (max-width: 768px) {
-  .navbar-content-left-links ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .navbar-content-right-links ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .navbar-content-right-links ul li i {
-    font-size: 1.25rem;
-  }
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0;
 }
-
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0.5rem 0;
-  }
-
-  .navbar-content {
-    gap: 0.5rem;
-  }
-
-  .navbar-content-left-links ul {
-    gap: 0.75rem;
-  }
-
-  .navbar-content-left-links ul li a {
-    font-size: 14px;
-    padding-right: 0;
-  }
-
-  .navbar-content-right-links ul {
-    gap: 0.75rem;
-  }
-
-  .navbar-content-right-links ul li i {
-    font-size: 1rem;
-  }
+/* .navbar-content-left-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+} */
+.navbar-content-left-links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0;
 }
-
+.navbar-content-left-links ul li a {
+  text-decoration: none;
+  color: #878680;
+  line-height: 36px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+  padding-right: 1rem;
+  display: inline-block;
+}
+.navbar-content-left-links ul li i {
+  font-size: 0.75rem;
+  color: #878680;
+  margin-left: -0.75rem;
+}
+.navbar-content-left-links ul li a:hover,
+.navbar-content-left-links ul li i:hover {
+  color: #1f1e17;
+}
+.navbar-content-right {
+  border-left: 1px solid #d2d0c6;
+}
+.navbar-content-right-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+.navbar-content-right-links ul li i {
+  font-size: 1.5rem;
+  color: black;
+}
+#active {
+  color: #1f1e17;
+}
 
 /* Hero section */
-@media (max-width: 1200px) {
-  .hero {
-    padding: 15rem 0;
-  }
-
-  .hero-content h1 {
-    font-size: 90px;
-    line-height: 90px;
-  }
-
-  .halfway-div {
-    width: 90%;
-    bottom: -400px;
-    flex-wrap: wrap;
-  }
-
-  .hero-card {
-    width: 300px;
-    height: 230px;
-  }
-
-  .double-circle-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .double-circle-content-left {
-    padding-left: 0;
-  }
-
-  .double-circle-content-right {
-    max-width: 100%;
-  }
+.hero {
+  background-image: url(../assets/hero-image01.png);
+  background-position: center;
+  background-size: cover;
+  padding: 20rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-content {
+  color: white;
+  max-width: 550px;
+  position: relative;
+}
+.hero-content::before {
+  position: absolute;
+  content: "";
+  background-image: url(../assets/hero-h1-leaf.png);
+  width: 92px;
+  height: 75px;
+  top: 135px;
+  left: 473.86px;
+}
+.hero-content h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+.hero-content h1 {
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 110px;
+}
+.hero-content h1 span {
+  color: #eec044;
+}
+.hero-content p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  opacity: 70%;
+  margin-top: 2rem;
+}
+.hero-content-action {
+  margin-top: 3rem;
+}
+.hero-content-action img {
+  margin-left: 1.5rem;
+}
+.halfway-div {
+  position: absolute;
+  width: 1320px;
+  height: 15rem;
+  background-color: transparent;
+  bottom: -500px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 264px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  /* margin-bottom: 30px; */
+}
+.hero-card p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #eec044;
+}
+.hero-card h4 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  text-align: center;
+  color: #1f1e17;
+}
+.hero-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  margin-top: 1rem;
 }
 
-@media (max-width: 992px) {
-  .hero {
-    padding: 12rem 0;
-  }
-
-  .hero-content h1 {
-    font-size: 72px;
-    line-height: 80px;
-  }
-
-  .halfway-div {
-    bottom: -350px;
-    gap: 1.5rem;
-  }
-
-  .hero-card {
-    width: 260px;
-    height: 210px;
-  }
-
-  .double-circle {
-    padding-top: 10rem;
-    padding-bottom: 8rem;
-  }
-
-  .double-circle-content-right h2 {
-    font-size: 2.5rem;
-    line-height: 50px;
-  }
-
-  .double-circle-content-right h5 {
-    font-size: 1.25rem;
-  }
+/* Double Circle section */
+.double-circle {
+  padding-top: 15rem;
+  padding-bottom: 10rem;
 }
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 10rem 0;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-content::before {
-    display: none;
-  }
-
-  .hero-content h1 {
-    font-size: 60px;
-    line-height: 70px;
-  }
-
-  .hero-content-action {
-    text-align: center;
-  }
-
-  .halfway-div {
-    position: static;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-  }
-
-  .hero-card {
-    width: 90%;
-    max-width: 280px;
-  }
-
-  .double-circle-content-right-box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .double-circle-content-right-checkbox {
-    flex-direction: column;
-    align-items: center;
-  }
+.double-circle-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
-
-@media (max-width: 576px) {
-  .hero {
-    padding: 8rem 0;
-  }
-
-  .hero-content h1 {
-    font-size: 45px;
-    line-height: 55px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .hero-content-action img {
-    margin-left: 0;
-  }
-
-  .hero-card {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .double-circle-content-right h2 {
-    font-size: 2rem;
-    line-height: 40px;
-  }
-
-  .double-circle-content-right h5 {
-    font-size: 1.1rem;
-  }
-
-  .double-circle-content-right p {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .double-circle-content-right-box-item img {
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .double-circle-content-right-box-item h3 {
-    font-size: 1rem;
-  }
+.double-circle-content-left {
+  padding-left: 1rem;
 }
+.double-circle-content-left img {
+  border-radius: 50%;
+  border: 8px solid white;
+}
+.circle-small {
+  position: relative;
+}
+.circle-small img {
+  position: absolute;
+  content: "";
+  left: -30px;
+  right: 0;
+  bottom: -100px;
+}
+.double-circle-content-right {
+  height: 100%;
+  max-width: 600px;
+}
+.double-circle-content-right h6 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #eec044;
+}
+.double-circle-content-right h2 {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 57.6px;
+}
+.double-circle-content-right h5 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: #4baf47;
+  margin: 2rem 0;
+}
+.double-circle-content-right p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 30px;
+  color: #878680;
+}
+.double-circle-content-right-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 2rem 0;
+}
+.double-circle-content-right-box-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.double-circle-content-right-box-item img {
+  height: 4rem;
+  width: 4rem;
+}
+.double-circle-content-right-box-item h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 28px;
+  color: #1f1e17;
+}
+.double-circle-content-right-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.double-circle-content-right-checkbox i {
+  font-size: 1rem;
+  color: #c5ce38;
+}
+.double-circle-content-right-checkbox p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 30px;
+  color: #1f1e17;
+  margin-bottom: 0;
+}
+.double-circle-content-right a {
+  margin-top: 3rem;
+}
+/*  1. Hero Section (.hero)
+The hero section serves as the first thing users see, with a background image and introductory content.
+
+background-image: url(../assets/hero-image01.png);
+→ Sets a background image for the hero section.
+background-position: center; background-size: cover;
+→ Ensures the image covers the full section without distortion.
+padding: 20rem 0;
+→ Adds vertical spacing.
+overflow: hidden;
+→ Prevents content from overflowing.
+Hero Content (.hero-content)
+This section contains text and buttons.
+
+color: white; max-width: 550px;
+→ Limits the width and makes text white for contrast.
+position: relative;
+→ Allows child elements to be positioned absolutely within it.
+Decorative Leaf Image (::before)
+Adds a decorative leaf image near the heading.
+position: absolute; content: ""; background-image: url(../assets/hero-h1-leaf.png);
+Positioned precisely with top: 135px; left: 473.86px;
+Text Styles
+Heading 5 (h5)
+→ font-size: 16px; line-height: 30px; (small subheading)
+Main Heading (h1)
+→ font-size: 120px; line-height: 110px; (large title text)
+The "&" symbol in the heading is highlighted with color: #eec044;
+Paragraph (p)
+→ opacity: 70%; makes the text slightly transparent.
+Action Buttons & Image (.hero-content-action)
+A primary button and an image (hero-leaf-golden.png) are placed side by side.
+The image is spaced using margin-left: 1.5rem;.
+2. Feature Cards (.halfway-div & .hero-card)
+This section contains three feature cards displayed in a row.
+
+Halfway Divider (.halfway-div)
+Positioned absolutely at the bottom.
+width: 1320px; height: 15rem; sets a fixed width and height.
+display: flex; align-items: center; justify-content: space-around;
+→ Ensures equal spacing between cards.
+Hero Cards (.hero-card)
+Each card has:
+
+width: 370px; height: 264px;
+background-color: #f6f6f6; border-radius: 10px;
+→ Light gray background with rounded edges.
+Text inside cards:
+Feature titles (p): color: #eec044; (gold color)
+Feature descriptions (h4): color: #1f1e17; (blackish text)
+Image inside cards (img)
+width: 90px; height: 90px; border-radius: 10px;
+→ Small, rounded icons at the bottom.
+3. Double Circle Section (.double-circle)
+This section contains an introduction to the agriculture business with text and images.
+
+Layout (.double-circle-content)
+Uses display: flex; align-items: center; justify-content: center; gap: 2rem;
+This places text on the right and two overlapping circular images on the left.
+Left Side (Two Circular Images)
+.circle-large & .circle-small contain two images inside circles.
+The small image is positioned using:
+position: absolute; left: -30px; bottom: -100px;
+This overlaps the larger circle.
+Right Side (Text & Content)
+Heading 6 (h6) → color: #eec044; (gold text)
+Main Heading (h2) → font-size: 3rem; font-weight: 800;
+Subheading (h5) → color: #4baf47; (green text for eco-farming theme)
+Paragraph (p) → color: #878680; (gray, readable text)
+Icons & Lists
+There are two small feature boxes (.double-circle-content-right-box-item):
+
+Each contains an image and heading (h3).
+Example: "Growing fruits & vegetables".
+Two checkbox points (.double-circle-content-right-checkbox):
+
+Uses Bootstrap icons (bi bi-check-circle-fill).
+The checkmarks are colored #c5ce38; (light green).
+Button
+margin-top: 3rem; adds spacing before the "Discover More" button.
+                   */
 
 /* What we offer section */
-@media (max-width: 1200px) {
-  .halfway-div {
-    width: 90%;
-  }
-  .hero-card {
-    width: 320px;
-    height: 240px;
-  }
+.what-we-offer {
+  padding-top: 8rem;
+  background-color: #f8f7f0;
+  padding-bottom: 10rem;
 }
-
-@media (max-width: 992px) {
-  .hero {
-    padding: 15rem 0;
-  }
-  .hero-content h1 {
-    font-size: 90px;
-    line-height: 90px;
-  }
-  .halfway-div {
-    flex-wrap: wrap;
-    height: auto;
-    bottom: -400px;
-  }
-  .hero-card {
-    width: 45%;
-    height: auto;
-    padding: 2rem;
-  }
-  .double-circle-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .double-circle-content-right {
-    max-width: 100%;
-  }
-  .double-circle-content-right-box {
-    justify-content: center;
-  }
-  .double-circle-content-right-checkbox {
-    justify-content: center;
-  }
-  .what-we-offer-4div-content {
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  .what-we-offer-4div-content-item {
-    width: 45%;
-  }
+.what-we-offer-content {
+  text-align: center;
 }
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 12rem 0;
-  }
-  .hero-content h1 {
-    font-size: 70px;
-    line-height: 80px;
-  }
-  .halfway-div {
-    flex-direction: column;
-    gap: 1rem;
-    bottom: -300px;
-  }
-  .hero-card {
-    width: 100%;
-  }
-  .double-circle-content {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .double-circle-content-right-box,
-  .double-circle-content-right-checkbox {
-    flex-direction: column;
-  }
-  .what-we-offer-4div-content {
-    flex-direction: column;
-  }
-  .what-we-offer-4div-content-item {
-    width: 90%;
-  }
+.what-we-offer-content p {
+  font-size: 1.5rem;
+  line-height: 36px;
+  color: #eec044;
+  text-align: center;
 }
-
-@media (max-width: 576px) {
-  .hero {
-    padding: 10rem 0;
-  }
-  .hero-content h1 {
-    font-size: 50px;
-    line-height: 60px;
-  }
-  .halfway-div {
-    width: 100%;
-    padding: 1rem;
-  }
-  .hero-card {
-    width: 100%;
-    height: auto;
-  }
-  .double-circle-content-right h2 {
-    font-size: 2rem;
-    line-height: 40px;
-  }
-  .what-we-offer-content h2 {
-    font-size: 2rem;
-    line-height: 40px;
-  }
-  .what-we-offer-4div-content-item {
-    width: 100%;
-  }
+.what-we-offer-content h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 57.6px;
+  color: #1f1e17;
+  text-align: center;
 }
+/* what we offer 4div */
+.what-we-offer-4div {
+  margin-top: -8rem;
+  margin-bottom: 5rem;
+}
+.what-we-offer-4div-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.what-we-offer-4div-content-item {
+  width: 270px;
+  height: 320px;
+  border-radius: 5px;
+  background-image: url(../assets/what-we-offer1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.what-we-offer-4div2 {
+  background-image: url(../assets/what-we-offer2.png);
+}
+.what-we-offer-4div3 {
+  background-image: url(../assets/what-we-offer3.png);
+}
+.what-we-offer-4div4 {
+  background-image: url(../assets/what-we-offer4.png);
+}
+.what-we-offer-4div-content-item img {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  top: 135px;
+  left: 100px;
+  border-radius: 7px;
+  z-index: 2;
+}
+.what-we-offer-4div-content-item-name {
+  position: absolute;
+  content: "";
+  width: 220px;
+  height: 128px;
+  top: 180px;
+  left: 25px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.what-we-offer-4div-content-item-name p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+  max-width: 110px;
+}
+.what-we-offer-4div-content-item a {
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 50px;
+  top: 180px;
+  left: 130px;
+  border-radius: 10px;
+  z-index: 3;
+  font-size: 12px;
+}
+/*          1️⃣ .what-we-offer-4div
+css
+Copy
+Edit
+.what-we-offer-4div {
+  margin-top: -8rem;
+  margin-bottom: 5rem;
+}
+✅ Explanation:
 
+Moves the section 8rem upwards (margin-top: -8rem), possibly overlapping with the previous section.
+Adds 5rem spacing at the bottom (margin-bottom: 5rem).
+2️⃣ .what-we-offer-4div-content
+css
+Copy
+Edit
+.what-we-offer-4div-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+✅ Explanation:
+
+Uses Flexbox to arrange items in a row.
+align-items: center; → Centers items vertically.
+justify-content: space-evenly; → Ensures equal spacing between cards.
+3️⃣ .what-we-offer-4div-content-item (Service Cards)
+css
+Copy
+Edit
+.what-we-offer-4div-content-item {
+  width: 270px;
+  height: 320px;
+  border-radius: 5px;
+  background-image: url(../assets/what-we-offer1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+✅ Explanation:
+
+Each service card has a fixed size (270px x 320px).
+A background image is applied (background-image).
+background-size: cover; ensures the image fully covers the div.
+border-radius: 5px; rounds the corners slightly.
+position: relative; → Allows absolute positioning of child elements.
+4️⃣ Different Background Images for Each Card
+css
+Copy
+Edit
+.what-we-offer-4div2 {
+  background-image: url(../assets/what-we-offer2.png);
+}
+.what-we-offer-4div3 {
+  background-image: url(../assets/what-we-offer3.png);
+}
+.what-we-offer-4div4 {
+  background-image: url(../assets/what-we-offer4.png);
+}
+✅ Explanation:
+
+Each card has a different background image based on the class (what-we-offer-4div2, what-we-offer-4div3, what-we-offer-4div4).
+5️⃣ Icon Styling (Inside the Cards)
+css
+Copy
+Edit
+.what-we-offer-4div-content-item img {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 135px;
+  left: 100px;
+  border-radius: 7px;
+  z-index: 2;
+}
+✅ Explanation:
+
+Icons (images) are placed inside the cards.
+Absolute positioning (position: absolute;) allows precise placement.
+top: 135px; left: 100px; → Positions the image inside the card.
+z-index: 2; → Places it above other elements.
+6️⃣ Card Name Box (White Background)
+css
+Copy
+Edit
+.what-we-offer-4div-content-item-name {
+  position: absolute;
+  width: 220px;
+  height: 128px;
+  top: 180px;
+  left: 25px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+✅ Explanation:
+
+This is a white background box inside the card that displays the service name.
+Absolute positioning (position: absolute;) ensures it stays fixed at a specific position.
+display: flex; align-items: center; justify-content: center; → Centers the text inside.
+7️⃣ Text Styling Inside the Name Box
+css
+Copy
+Edit
+.what-we-offer-4div-content-item-name p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+  max-width: 110px;
+}
+✅ Explanation:
+
+Bold (font-weight: 700;) to make the text stand out.
+Centered text (text-align: center;).
+Fixed width (max-width: 110px;) prevents overflow.
+8️⃣ "Read More" Button Styling
+css
+Copy
+Edit
+.what-we-offer-4div-content-item a {
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  top: 180px;
+  left: 130px;
+  border-radius: 10px;
+  z-index: 3;
+  font-size: 12px;
+}
+✅ Explanation:
+
+Absolute positioning (position: absolute;) places the button inside the card.
+Fixed width and height (120px x 50px).
+Rounded corners (border-radius: 10px;).
+z-index: 3; → Ensures it's above other elements.
+Small font (font-size: 12px;) for a compact button look.
+💡 Summary
+✔ 4 Service Cards are arranged in a flexbox layout.
+✔ Each card has a background image, icon, name box, and button.
+✔ Uses absolute positioning to layer elements correctly.
+✔ Flexbox ensures equal spacing and alignment.
+
+     */
 /* aggriculture matters section */
-@media (max-width: 1200px) {
-  .aggriculture-matters-content h2 {
-    font-size: 60px;
-    line-height: 74px;
-  }
-  .aggriculture-matters-content div {
-    top: 300px;
-    left: 80%;
-  }
+.aggriculture-matters-top-content {
+  background-color: #4baf47;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  /* position: absolute;
+  z-index: 2; */
+  width: 100%;
+  height: 8rem;
+  margin-bottom: -80px;
+}
+.aggriculture-matters-top-content p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  margin: 0 2rem 0 2rem;
+}
+.aggriculture-matters {
+  background-image: url(../assets/aggriculture-matters.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 15rem;
+  padding-bottom: 7rem;
+  margin: 0 5px;
+  position: relative;
+  z-index: -1;
+}
+.aggriculture-matters-content {
+  max-width: 550px;
+  text-align: left;
+}
+.aggriculture-matters-content h2 {
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 84px;
+  color: white;
+}
+.aggriculture-matters-content div {
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  top: 350px;
+  left: 1350px;
+  transition: all 0.3s;
+}
+.aggriculture-matters-content a {
+  display: inline-block;
+  transition: transform 0.3s;
 }
 
-@media (max-width: 992px) {
-  .aggriculture-matters-top-content {
-    flex-direction: column;
-    gap: 2rem;
-    height: auto;
-    padding: 2rem;
-  }
-  .aggriculture-matters-content h2 {
-    font-size: 50px;
-    line-height: 64px;
-  }
-  .aggriculture-matters-content div {
-    width: 80px;
-    height: 80px;
-    top: 280px;
-    left: 75%;
-  }
-  .aggriculture-matters {
-    padding-top: 12rem;
-    padding-bottom: 5rem;
-  }
+.aggriculture-matters-content a:hover {
+  transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .aggriculture-matters-top-content p {
-    font-size: 0.9rem;
-    line-height: 26px;
-  }
-  .aggriculture-matters-content h2 {
-    font-size: 40px;
-    line-height: 54px;
-  }
-  .aggriculture-matters-content div {
-    width: 70px;
-    height: 70px;
-    top: 250px;
-    left: 70%;
-  }
-  .aggriculture-matters {
-    padding-top: 10rem;
-    padding-bottom: 4rem;
-  }
+.aggriculture-matters-content div i {
+  font-size: 50px;
+  color: black;
 }
-
-@media (max-width: 576px) {
-  .aggriculture-matters-top-content {
-    gap: 1rem;
-    padding: 1.5rem;
-  }
-  .aggriculture-matters-top-content p {
-    font-size: 0.8rem;
-    line-height: 24px;
-  }
-  .aggriculture-matters-content {
-    max-width: 100%;
-    text-align: center;
-  }
-  .aggriculture-matters-content h2 {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  .aggriculture-matters-content div {
-    width: 60px;
-    height: 60px;
-    top: 220px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .aggriculture-matters {
-    padding-top: 8rem;
-    padding-bottom: 3rem;
-  }
-}
-
 /* Explore projects section */
 .explore-projects-content {
   width: 100%;
@@ -961,6 +1642,10 @@
   padding: 8rem 0;
   background-color: #f8f7f0;
 }
+
+
+
+
 
 /* Footer section */
 .footer {
