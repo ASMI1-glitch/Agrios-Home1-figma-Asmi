@@ -213,196 +213,168 @@
 
 
 /* Hero section */
-.hero {
-  background-image: url(../assets/hero-image01.png);
-  background-position: center;
-  background-size: cover;
-  padding: 20rem 0;
-  position: relative;
-  overflow: hidden;
-}
-.hero-content {
-  color: white;
-  max-width: 550px;
-  position: relative;
-}
-.hero-content::before {
-  position: absolute;
-  content: "";
-  background-image: url(../assets/hero-h1-leaf.png);
-  width: 92px;
-  height: 75px;
-  top: 135px;
-  left: 473.86px;
-}
-.hero-content h5 {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  margin-bottom: 1rem;
-}
-.hero-content h1 {
-  font-weight: 400;
-  font-size: 120px;
-  line-height: 110px;
-}
-.hero-content h1 span {
-  color: #eec044;
-}
-.hero-content p {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  opacity: 70%;
-  margin-top: 2rem;
-}
-.hero-content-action {
-  margin-top: 3rem;
-}
-.hero-content-action img {
-  margin-left: 1.5rem;
-}
-.halfway-div {
-  position: absolute;
-  width: 1320px;
-  height: 15rem;
-  background-color: transparent;
-  bottom: -500px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-}
-.hero-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 370px;
-  height: 264px;
-  background-color: #f6f6f6;
-  border-radius: 10px;
-  /* margin-bottom: 30px; */
-}
-.hero-card p {
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  color: #eec044;
-}
-.hero-card h4 {
-  font-weight: 800;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  text-align: center;
-  color: #1f1e17;
-}
-.hero-card img {
-  width: 90px;
-  height: 90px;
-  border-radius: 10px;
-  margin-top: 1rem;
+@media (max-width: 1200px) {
+  .hero {
+    padding: 15rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 90px;
+    line-height: 90px;
+  }
+
+  .halfway-div {
+    width: 90%;
+    bottom: -400px;
+    flex-wrap: wrap;
+  }
+
+  .hero-card {
+    width: 300px;
+    height: 230px;
+  }
+
+  .double-circle-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .double-circle-content-left {
+    padding-left: 0;
+  }
+
+  .double-circle-content-right {
+    max-width: 100%;
+  }
 }
 
-/* Double Circle section */
-.double-circle {
-  padding-top: 15rem;
-  padding-bottom: 10rem;
+@media (max-width: 992px) {
+  .hero {
+    padding: 12rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 72px;
+    line-height: 80px;
+  }
+
+  .halfway-div {
+    bottom: -350px;
+    gap: 1.5rem;
+  }
+
+  .hero-card {
+    width: 260px;
+    height: 210px;
+  }
+
+  .double-circle {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
+
+  .double-circle-content-right h2 {
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
+
+  .double-circle-content-right h5 {
+    font-size: 1.25rem;
+  }
 }
-.double-circle-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 10rem 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-content::before {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .hero-content-action {
+    text-align: center;
+  }
+
+  .halfway-div {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .hero-card {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .double-circle-content-right-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .double-circle-content-right-checkbox {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.double-circle-content-left {
-  padding-left: 1rem;
-}
-.double-circle-content-left img {
-  border-radius: 50%;
-  border: 8px solid white;
-}
-.circle-small {
-  position: relative;
-}
-.circle-small img {
-  position: absolute;
-  content: "";
-  left: -30px;
-  right: 0;
-  bottom: -100px;
-}
-.double-circle-content-right {
-  height: 100%;
-  max-width: 600px;
-}
-.double-circle-content-right h6 {
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  color: #eec044;
-}
-.double-circle-content-right h2 {
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 57.6px;
-}
-.double-circle-content-right h5 {
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 30px;
-  color: #4baf47;
-  margin: 2rem 0;
-}
-.double-circle-content-right p {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 30px;
-  color: #878680;
-}
-.double-circle-content-right-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 2rem 0;
-}
-.double-circle-content-right-box-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.double-circle-content-right-box-item img {
-  height: 4rem;
-  width: 4rem;
-}
-.double-circle-content-right-box-item h3 {
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 28px;
-  color: #1f1e17;
-}
-.double-circle-content-right-checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
-}
-.double-circle-content-right-checkbox i {
-  font-size: 1rem;
-  color: #c5ce38;
-}
-.double-circle-content-right-checkbox p {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 30px;
-  color: #1f1e17;
-  margin-bottom: 0;
-}
-.double-circle-content-right a {
-  margin-top: 3rem;
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 8rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .hero-content-action img {
+    margin-left: 0;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .double-circle-content-right h2 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+
+  .double-circle-content-right h5 {
+    font-size: 1.1rem;
+  }
+
+  .double-circle-content-right p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .double-circle-content-right-box-item img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .double-circle-content-right-box-item h3 {
+    font-size: 1rem;
+  }
 }
 
 /* What we offer section */
