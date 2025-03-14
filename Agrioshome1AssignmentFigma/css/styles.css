@@ -378,99 +378,115 @@
 }
 
 /* What we offer section */
-.what-we-offer {
-  padding-top: 8rem;
-  background-color: #f8f7f0;
-  padding-bottom: 10rem;
+@media (max-width: 1200px) {
+  .halfway-div {
+    width: 90%;
+  }
+  .hero-card {
+    width: 320px;
+    height: 240px;
+  }
 }
-.what-we-offer-content {
-  text-align: center;
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 15rem 0;
+  }
+  .hero-content h1 {
+    font-size: 90px;
+    line-height: 90px;
+  }
+  .halfway-div {
+    flex-wrap: wrap;
+    height: auto;
+    bottom: -400px;
+  }
+  .hero-card {
+    width: 45%;
+    height: auto;
+    padding: 2rem;
+  }
+  .double-circle-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .double-circle-content-right {
+    max-width: 100%;
+  }
+  .double-circle-content-right-box {
+    justify-content: center;
+  }
+  .double-circle-content-right-checkbox {
+    justify-content: center;
+  }
+  .what-we-offer-4div-content {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .what-we-offer-4div-content-item {
+    width: 45%;
+  }
 }
-.what-we-offer-content p {
-  font-size: 1.5rem;
-  line-height: 36px;
-  color: #eec044;
-  text-align: center;
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 12rem 0;
+  }
+  .hero-content h1 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .halfway-div {
+    flex-direction: column;
+    gap: 1rem;
+    bottom: -300px;
+  }
+  .hero-card {
+    width: 100%;
+  }
+  .double-circle-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .double-circle-content-right-box,
+  .double-circle-content-right-checkbox {
+    flex-direction: column;
+  }
+  .what-we-offer-4div-content {
+    flex-direction: column;
+  }
+  .what-we-offer-4div-content-item {
+    width: 90%;
+  }
 }
-.what-we-offer-content h2 {
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 57.6px;
-  color: #1f1e17;
-  text-align: center;
-}
-/* what we offer 4div */
-.what-we-offer-4div {
-  margin-top: -8rem;
-  margin-bottom: 5rem;
-}
-.what-we-offer-4div-content {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.what-we-offer-4div-content-item {
-  width: 270px;
-  height: 320px;
-  border-radius: 5px;
-  background-image: url(../assets/what-we-offer1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-.what-we-offer-4div2 {
-  background-image: url(../assets/what-we-offer2.png);
-}
-.what-we-offer-4div3 {
-  background-image: url(../assets/what-we-offer3.png);
-}
-.what-we-offer-4div4 {
-  background-image: url(../assets/what-we-offer4.png);
-}
-.what-we-offer-4div-content-item img {
-  position: absolute;
-  content: "";
-  width: 70px;
-  height: 70px;
-  top: 135px;
-  left: 100px;
-  border-radius: 7px;
-  z-index: 2;
-}
-.what-we-offer-4div-content-item-name {
-  position: absolute;
-  content: "";
-  width: 220px;
-  height: 128px;
-  top: 180px;
-  left: 25px;
-  border-radius: 10px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-.what-we-offer-4div-content-item-name p {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  margin: 0;
-  max-width: 110px;
-}
-.what-we-offer-4div-content-item a {
-  position: absolute;
-  content: "";
-  width: 120px;
-  height: 50px;
-  top: 180px;
-  left: 130px;
-  border-radius: 10px;
-  z-index: 3;
-  font-size: 12px;
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 10rem 0;
+  }
+  .hero-content h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .halfway-div {
+    width: 100%;
+    padding: 1rem;
+  }
+  .hero-card {
+    width: 100%;
+    height: auto;
+  }
+  .double-circle-content-right h2 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .what-we-offer-content h2 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .what-we-offer-4div-content-item {
+    width: 100%;
+  }
 }
 
 /* aggriculture matters section */
